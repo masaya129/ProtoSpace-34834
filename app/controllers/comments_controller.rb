@@ -3,8 +3,7 @@ class CommentsController < ApplicationController
     @comment = Comment.create(comment_params)
     if @comment.save
       redirect_to "/prototypes/#{@comment.prototype.id}"
-    else
-      render template: 'prototypes/show'
+  
     end
   end
 
